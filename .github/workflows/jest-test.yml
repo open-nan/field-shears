@@ -27,5 +27,8 @@ jobs:
       - name: 使用 pnpm 安装整个项目所有的依赖包
         run: pnpm install --no-frozen-lockfile
 
+      - name: eslint 检查
+        run: pnpm lint
+
       - name: 单元测试检查
         run: pnpm test
