@@ -1,1 +1,3 @@
 # Prettier检查代码样式时，要忽略掉的文件和目录
+dist
+pnpm-lock.yaml

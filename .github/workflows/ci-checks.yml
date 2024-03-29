@@ -27,6 +27,9 @@ jobs:
       - name: 使用 pnpm 安装整个项目所有的依赖包
         run: pnpm install --no-frozen-lockfile
 
+      - name: prettier 检查
+        run: pnpm prettier:check
+
       - name: eslint 检查
         run: pnpm lint
 

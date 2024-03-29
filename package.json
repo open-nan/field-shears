@@ -8,6 +8,7 @@
     "test": "jest",
     "lint": "eslint .",
     "prettier": "prettier . --write",
+    "prettier:check": "prettier . --check",
     "husky": "npm run prettier && npm run lint && npm run test && npm run build && git add .",
     "prepare": "husky"
   },
