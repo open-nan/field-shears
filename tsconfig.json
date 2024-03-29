@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2015", // 编译目标 JavaScript 版本
+    "module": "commonjs", // 模块系统 (如 commonjs、amd、es6)
+    "strict": true, // 启用严格的类型检查
+    "outDir": "./dist", // 输出目录
+    "rootDir": "./", // 源代码目录
+    "declaration": true, // 启用声明文件输出
+    "paths": {
+      "@root/*": ["./*"],
+      "@test/*": ["./test/*"]
+    }
+  },
+  "types": ["node", "jest"],
+  "include": ["**/*.ts"], // 要包含的文件或目录
+  "exclude": ["node_modules", "dist", "test"] // 要排除的文件或目录
+}

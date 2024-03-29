@@ -1,0 +1,3 @@
+# Git提交代码时，要忽略掉的文件和目录
+.DS_Store
+node_modules/

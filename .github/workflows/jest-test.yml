@@ -1,0 +1,31 @@
+name: "[CI] 单元测试"
+
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 进入当前仓库要合并的分支
+        uses: actions/checkout@v3
+
+      - name: 安装 pnpm 7.5.1 包管理器
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: "7.5.1"
+          run_install: false
+
+      - name: 配置 Node 16.15.1 环境
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.15.1"
+          cache: "pnpm"
+
+      - name: 使用 pnpm 安装整个项目所有的依赖包
+        run: pnpm install --no-frozen-lockfile
+
+      - name: 单元测试检查
+        run: pnpm test
