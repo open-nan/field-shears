@@ -1,4 +1,5 @@
 {
+  "baseUrl": "./",
   "compilerOptions": {
     "target": "es2015", // 编译目标 JavaScript 版本
     "module": "commonjs", // 模块系统 (如 commonjs、amd、es6)
